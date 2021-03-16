@@ -12,17 +12,16 @@ function binarySearch(arr: number[], num: number): number {
 
     let mid = Math.floor((arr.length - 1) / 2);
     let guess = arr[mid];
-
     return binarySearch(
       guess < num
-        ? arr.splice(mid + 1)
-        : arr.splice(0, mid + 1),
+        ? arr.slice(mid + 1)
+        : arr.slice(0, mid + 1),
       num
     )
 }
 
-const length = 2 ** 7;
-const arr = getSortedNumberArray(length);
+const length = 2 ** 5;
+const arr = getSortedNumberArray(length, 300);
 const num = arr[getRandomNumber(0, length - 1)];
 
 console.log('=>', arr, num);
