@@ -1,6 +1,6 @@
 function reverseNumber(n, ans = 0) {
   if (n > 0) {
-    return reverseNumber(Math.floor(n / 10), ans * 10 + n % 10);
+    return reverseNumber((n - n % 10) / 10, ans * 10 + n % 10);
   }
   else {
     return ans;
