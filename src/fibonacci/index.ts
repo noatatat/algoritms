@@ -6,4 +6,4 @@ function fib(n: number): number {
   }
 }
 
-console.log(fib(77));
+console.log(fib(20));
